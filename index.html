@@ -4,39 +4,56 @@
   <meta charset="UTF-8" />
   <title>Graduation Countdown</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <style>
     body {
-    height: 100vh;            /* full screen height */
-    margin: 0;
-    padding: 0;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
 
-    display: flex;
-    justify-content: center;  /* center horizontally */
-    align-items: center;      /* center vertically */
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-    background-color: #0f1624; /* your dark background */
-}
+      background-color: #0f1624;
+    }
 
-.container {
-    display: flex;
-    flex-direction: column;   /* stack title and timer vertically */
-    align-items: center;
-}
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
 
-  .countdown-timer {
-    transform: scale(2.0);
-    transform-origin: center center;
-    display: inline-block;
-  }  
+    /* Desktop size */
+    .countdown-timer {
+      transform: scale(2);
+      transform-origin: center center;
+      display: inline-block;
+    }
+
+    /* Mobile fix */
+    @media (max-width: 600px) {
+      .countdown-timer {
+        transform: scale(1);  /* Smaller for phones */
+      }
+    }
   </style>
 </head>
+
 <body>
   <div class="container">
-    <!-- Countdown widget -->
-<script src="https://cdn.logwork.com/widget/countdown.js"></script>
-<a href="https://logwork.com/countdown-af6s" class="countdown-timer" data-timezone="America/Chicago" data-textcolor="#120404" data-date="2025-12-12 13:00" data-background="#f0e7e7" data-digitscolor="#331313" data-unitscolor="#ed3939">Graduation Timer</a>
+    <script src="https://cdn.logwork.com/widget/countdown.js"></script>
+    <a href="https://logwork.com/countdown-af6s" 
+       class="countdown-timer" 
+       data-timezone="America/Chicago" 
+       data-textcolor="#120404" 
+       data-date="2025-12-12 13:00" 
+       data-background="#f0e7e7" 
+       data-digitscolor="#331313" 
+       data-unitscolor="#ed3939">
+       Graduation Timer
     </a>
   </div>
 </body>
 </html>
-
